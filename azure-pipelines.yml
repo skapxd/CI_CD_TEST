@@ -14,11 +14,6 @@ pool:
 
 steps:
 
-- script: |
-    echo 'institucion: ' $(institucion)
-    echo 'paquete: ' $(paquete)
-  displayName: 'Echo variables 2'
-
 - task: NodeTool@0
   inputs:
     versionSpec: '16.15.1'
@@ -48,10 +43,10 @@ steps:
   inputs:
     apkFiles: 'android/app/build/outputs/bundle/release/*.aab'
     jarsign: true 
-    jarsignerKeystoreFile: 'upload_android.jks'
-    jarsignerKeystorePassword: 'KB8p6wPNyXNWYJ3XamxQ'
-    jarsignerKeystoreAlias: 'publishingkey'
-    jarsignerKeyPassword: 'KB8p6wPNyXNWYJ3XamxQ'
+    jarsignerKeystoreFile: 'my-upload-key.keystore'
+    jarsignerKeystorePassword: '1234567890'
+    jarsignerKeystoreAlias: 'my-key-alias'
+    jarsignerKeyPassword: '1234567890'
     jarsignerArguments: '-sigalg SHA256withRSA -digestalg SHA-256'
     zipalign: true
 
