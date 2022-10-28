@@ -75,4 +75,4 @@ steps:
     packageName: 'com.ci_cd_test'
     track: internal
     status: completed
-    userFraction: "0.99"
+    # userFraction: "0.99"
