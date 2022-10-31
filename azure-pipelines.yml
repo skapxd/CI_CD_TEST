@@ -68,11 +68,11 @@ steps:
     artifactName: 'drop'
     downloadPath: '$(System.ArtifactsDirectory)'
 
-- task: ms-vsclient.google-play.google-play-status-update.GooglePlayStatusUpdate@2
-  displayName: 'Update com.ci_cd_test status to completed'
-  inputs:
-    serviceConnection: test
-    packageName: 'com.ci_cd_test'
-    track: internal
-    status: completed
-    # userFraction: "0.99"
+# - task: ms-vsclient.google-play.google-play-status-update.GooglePlayStatusUpdate@2
+#   displayName: 'Update com.ci_cd_test status to completed'
+#   inputs:
+#     serviceConnection: test
+#     packageName: 'com.ci_cd_test'
+#     track: internal
+#     status: completed
+#     # userFraction: "0.99"
