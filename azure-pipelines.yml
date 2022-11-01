@@ -13,6 +13,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- script: | 
+    echo hola
 
 - task: NodeTool@0
   inputs:
